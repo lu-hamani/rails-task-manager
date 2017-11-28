@@ -1,0 +1,15 @@
+<h1 style="text-align: center"> ToDo list </h1>
+
+<h2><%= link_to "Add a task", tasks_new_path %></h2>
+
+<h2>Tasks</h2>
+<% @tasks.each do |task| %>
+<ul>
+  <li>
+    <h2><%= task.id %>. Task : <br> <%= link_to task.name, task_path(task) %></h2>
+    <h3>Description: <br> <%= task.description %></h3>
+    <p>Assigned to : <br> <%= task.user %></p>
+  </li>
+  <%= link_to "Delete", task_path(task),method: :delete %>
+</ul>
+<% end %>

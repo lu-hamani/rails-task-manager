@@ -1,0 +1,9 @@
+<h1 style="text-align: center"> Your task is...</h1>
+
+<h2>Action : <br> <%= @task.name %></h2>
+<h3>Description: <br> <%= @task.description %></h3>
+<p>Assigned to : <br> <%= @task.user %></p>
+
+<h2> <%= link_to "Back to all", tasks_path %>
+<br>
+<%= link_to "Edit task", task_edit_path(@task) %></h2>
